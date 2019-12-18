@@ -1,5 +1,12 @@
 # pompeii_utils
 
+Installations required: 
+
+Wand
+OpenCV
+Flask
+
+
 1. Extract PDF pages as images for processing.
 
 ```usage: extract_pages.py [-h] pdf_file_path output_folder begin_page end_page
