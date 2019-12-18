@@ -1,6 +1,6 @@
 # pompeii_utils
 
-Installations required: Wand, OpenCV, Flask
+Installations required: Wand, OpenCV, Flask, https://github.com/tzutalin/labelImg
 
 
 1. Extract PDF pages as images for processing.
