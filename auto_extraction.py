@@ -91,14 +91,13 @@ def get_rois(imgray, raw_image, page, output_folder):
 
 def new_extract_images(raw_folder, output_folder):
     idx = 0
-    #for img_path in glob.glob(os.path.join(raw_folder, '*.jpg')):
-    for img_path in [os.path.join(raw_folder, x) for x in ['page_{}.jpg'.format(i) for i in range(32, 50)]]:
+    for img_path in glob.glob(os.path.join(raw_folder, '*.jpg')):
+    #for img_path in [os.path.join(raw_folder, x) for x in ['page_{}.jpg'.format(i) for i in range(32, 50)]]:
         #print(img_path)
         basename = os.path.basename(img_path)
         page = basename.split('.jpg')[0]
         #img = cv2.imread(img_path, 0)
         img = cv2.imread(os.path.join(raw_folder, basename), 0)
-        raw_img = cv2.imread(os.path.join(raw_folder, basename))
         
         blur = cv2.GaussianBlur(img, (5, 5), 0)
         ret3, img = cv2.threshold(blur, 0, 255, cv2.THRESH_BINARY+cv2.THRESH_OTSU)
@@ -120,7 +119,7 @@ def new_extract_images(raw_folder, output_folder):
         
         #output = 255 - output
         #cv2.imwrite(os.path.join(output_folder, 'eroded_'+basename), output)
-        
+        raw_img = cv2.imread(os.path.join(raw_folder, basename))
         get_rois(output, raw_img, page, output_folder)
         
         idx += 1

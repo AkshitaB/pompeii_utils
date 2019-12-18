@@ -1,12 +1,6 @@
-from wand.image import Image
-from PIL import Image as PI
-import pyocr
-import pyocr.builders
-import io
 import os
 import cv2
 import ipdb
-from PyPDF2 import PdfFileWriter, PdfFileReader
 import numpy as np
 import time
 import glob
