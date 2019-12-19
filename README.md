@@ -19,7 +19,7 @@ optional arguments:
   -h, --help     show this help message and exit
 ```
 
-Eg. python extract_pages.py ../PPM/PDFs/PPM-4ocr2.pdf ../page_images/PPM4 22 25
+Eg. python wrapper_extract_pages.py ../PPM/PDFs/PPM-4ocr2.pdf ../page_images/PPM4 22 25
 
 2. Auto extract pictures
 
